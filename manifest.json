@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Subject Register",
+  "version": "1.0",
+  "description": "Subject Register",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "16": "icons/logo.png",
+    "32": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
+  },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["tabs", "activeTab", "background", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://dkhp.hcmue.edu.vn/*"],
+      "js": ["scripts/content.js", "scripts/startRegistration.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "host_permissions": ["*://dkhp.hcmue.edu.vn/*"]
+}
