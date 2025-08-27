@@ -57,6 +57,7 @@ async function register(subjectCodeSearch, msg) {
                   const regisBtn = document.querySelector(
                     ".MuiButton-root.MuiButton-contained.MuiButton-containedPrimary"
                   );
+                  await new Promise((resolve) => setTimeout(resolve, 200));
                   regisBtn.click();
                   flag = true;
                   available = true;
@@ -73,6 +74,7 @@ async function register(subjectCodeSearch, msg) {
                     const regisBtn = document.querySelector(
                       ".MuiButton-root.MuiButton-contained.MuiButton-containedPrimary"
                     );
+                    await new Promise((resolve) => setTimeout(resolve, 200));
                     regisBtn.click();
                     flag = true;
                     break;
